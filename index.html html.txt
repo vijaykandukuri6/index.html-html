@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Light ON/OFF</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding-top: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #lightBulb {
+      width: 150px;
+      margin: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Light ON / OFF</h1>
+
+  <img id="lightBulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Light Bulb">
+  <br>
+
+  <button onclick="toggleLight()">Toggle Light</button>
+
+  <script>
+    let isOn = false;
+
+    function toggleLight() {
+      const bulb = document.getElementById("lightBulb");
+      if (isOn) {
+        bulb.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+        isOn = false;
+      } else {
+        bulb.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+        isOn = true;
+      }
+    }
+  </script>
+
+</body>
+</html>
